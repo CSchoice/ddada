@@ -78,6 +78,28 @@
 
 <div align="left">
 
+### BE
+
+---
+
+#### 🚀 프레임워크 및 라이브러리
+
+<img src="https://img.shields.io/badge/springboot-6DB33F?style=for-the-badge&amp;logo=springboot&amp;logoColor=white" height="35"> 
+<img src="https://img.shields.io/badge/spring_security-6DB33F?style=for-the-badge&amp;logo=springsecurity&amp;logoColor=white" height="35"> 
+<img src="https://img.shields.io/badge/swagger-85EA2D?style=for-the-badge&amp;logo=swagger&amp;logoColor=white" height="35">
+
+#### 📂 DB 및 스토리지
+
+<img src="https://img.shields.io/badge/postgresql-4169E1?style=for-the-badge&amp;logo=postgresql&amp;logoColor=white" height="35"> 
+<img src="https://img.shields.io/badge/redis-FF4438?style=for-the-badge&amp;logo=redis&amp;logoColor=white" height="35"> 
+<img src="https://img.shields.io/badge/elasticsearch-005571?style=for-the-badge&amp;logo=elasticsearch&amp;logoColor=white" height="35"> 
+<img src="https://img.shields.io/badge/aws_s3-569A31?style=for-the-badge&amp;logo=amazons3&amp;logoColor=white" height="35">
+
+#### 🎁 API
+
+<img src="https://img.shields.io/badge/kakao-FFCD00?style=for-the-badge&amp;logo=kakao&amp;logoColor=white" height="35"> 
+<img src="https://img.shields.io/badge/gmail-EA4335?style=for-the-badge&amp;logo=gmail&amp;logoColor=white" height="35">
+
 ### FE
 
 ---
@@ -102,28 +124,6 @@
   #### 🔧 코드 품질 관리
   <img src="https://img.shields.io/badge/eslint-4B32C3?style=for-the-badge&amp;logo=eslint&amp;logoColor=white" height="35">
   <img src="https://img.shields.io/badge/prettier-F7B93E?style=for-the-badge&amp;logo=prettier&amp;logoColor=white" height="35">
-
-### BE
-
----
-
-#### 🚀 프레임워크 및 라이브러리
-
-<img src="https://img.shields.io/badge/springboot-6DB33F?style=for-the-badge&amp;logo=springboot&amp;logoColor=white" height="35"> 
-<img src="https://img.shields.io/badge/spring_security-6DB33F?style=for-the-badge&amp;logo=springsecurity&amp;logoColor=white" height="35"> 
-<img src="https://img.shields.io/badge/swagger-85EA2D?style=for-the-badge&amp;logo=swagger&amp;logoColor=white" height="35">
-
-#### 📂 DB 및 스토리지
-
-<img src="https://img.shields.io/badge/postgresql-4169E1?style=for-the-badge&amp;logo=postgresql&amp;logoColor=white" height="35"> 
-<img src="https://img.shields.io/badge/redis-FF4438?style=for-the-badge&amp;logo=redis&amp;logoColor=white" height="35"> 
-<img src="https://img.shields.io/badge/elasticsearch-005571?style=for-the-badge&amp;logo=elasticsearch&amp;logoColor=white" height="35"> 
-<img src="https://img.shields.io/badge/aws_s3-569A31?style=for-the-badge&amp;logo=amazons3&amp;logoColor=white" height="35">
-
-#### 🎁 API
-
-<img src="https://img.shields.io/badge/kakao-FFCD00?style=for-the-badge&amp;logo=kakao&amp;logoColor=white" height="35"> 
-<img src="https://img.shields.io/badge/gmail-EA4335?style=for-the-badge&amp;logo=gmail&amp;logoColor=white" height="35">
 
 ### DATA
 
