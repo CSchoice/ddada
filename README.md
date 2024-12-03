@@ -1,4 +1,4 @@
-# SSAFY A509 DDADA
+# 프로젝트 따다
 
 <img src="docs/images/logo.png" alt="따다" width="350" />
 
