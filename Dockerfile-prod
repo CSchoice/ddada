@@ -1,19 +1,14 @@
-FROM openjdk:17 AS build
-
-RUN apt-get update && apt-get install -y findutils && apt-get clean
+FROM openjdk:17
 
 COPY gradlew .
 COPY gradle gradle
 COPY build.gradle .
 COPY settings.gradle .
 COPY src src
-
 RUN chmod +x ./gradlew
 RUN ./gradlew build --exclude-task test
 
-FROM openjdk:17-slim
-
-COPY --from=build /app/build/libs/*.jar app.jar
+RUN cp ./build/libs/*.jar ./app.jar
 
 EXPOSE 8080
 
