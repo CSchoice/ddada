@@ -17,6 +17,7 @@ spring:
 
 logging:
   level:
+    root: debug
     org:
       springframework:
         web: info
