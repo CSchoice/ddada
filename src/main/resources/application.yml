@@ -1,3 +1,6 @@
+server:
+  port: 8082
+
 kakao:
   content-type: application/x-www-form-urlencoded
   iss: https://kauth.kakao.com
@@ -33,17 +36,14 @@ spring:
 
   data:
     redis:
-      cluster:
-        max-redirects: 6
-        nodes: ${REDIS_NODES}
-      password: ${REDIS_PASSWORD}
+      host: ${REDIS_HOST}
+      port: ${REDIS_PORT}
       lettuce:
         pool:
           max-active: 8
           max-wait: 20000
   elasticsearch:
-    username: ${ELASTICSEARCH_USERNAME}
-    password: ${ELASTICSEARCH_PASSWORD}
+    api-key: ${ELASTICSEARCH_API_KEY}
     uris: ${ELASTICSEARCH_URIS}
 
   graphql:

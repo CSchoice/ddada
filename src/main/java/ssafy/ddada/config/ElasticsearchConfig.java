@@ -13,6 +13,8 @@ import ssafy.ddada.common.properties.ElasticsearchProperties;
 
 import java.util.Arrays;
 
+import org.apache.http.HttpHeaders;
+
 @Slf4j
 @Configuration
 @Configurable
@@ -27,10 +29,19 @@ public class ElasticsearchConfig extends ElasticsearchConfiguration {
     @Override
     public ClientConfiguration clientConfiguration() {
         log.info("Elasticsearch Client Configuration >>>> uris: {}", Arrays.toString(elasticsearchProperties.uris()));
+
+        String encodedApiKey = elasticsearchProperties.apiKey(); // base64 인코딩된 API Key
+
+        // spring-data-elasticsearch에서 제공하는 HttpHeaders 사용
+        org.springframework.data.elasticsearch.support.HttpHeaders headers =
+                new org.springframework.data.elasticsearch.support.HttpHeaders();
+
+        headers.add(HttpHeaders.AUTHORIZATION, "ApiKey " + encodedApiKey);
+
         return ClientConfiguration.builder()
                 .connectedTo(elasticsearchProperties.uris())
-                .withBasicAuth(elasticsearchProperties.username(), elasticsearchProperties.password())
+                .usingSsl()
+                .withDefaultHeaders(headers)
                 .build();
     }
-
 }
