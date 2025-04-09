@@ -1,12 +1,11 @@
-FROM openjdk:17-slim-buster
-
-RUN apt-get update && apt-get install -y findutils
-
+FROM openjdk:17-slim-buster AS build
 WORKDIR /app
 COPY . .
-RUN chmod -R 755 /app
-RUN chmod +x ./gradlew && ./gradlew build -x test
+RUN apt-get update && apt-get install -y findutils && \
+    chmod +x ./gradlew && ./gradlew bootJar
 
-COPY build/libs/app.jar app.jar
+FROM openjdk:17-slim-buster
+WORKDIR /app
+COPY --from=build /app/build/libs/app.jar app.jar
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "-Duser.timezone=Asia/Seoul", "-Dspring.profiles.active=prod", "app.jar"]
