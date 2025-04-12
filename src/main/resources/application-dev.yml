@@ -1,5 +1,5 @@
 server:
-  port: 8082
+  port: 8083
 
 spring:
   config:
@@ -40,7 +40,7 @@ springdoc:
 
 management:
   server:
-    port: 8081
+    port: 8084
   endpoint:
     health:
       show-details: always
