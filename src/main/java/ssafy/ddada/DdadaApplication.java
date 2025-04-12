@@ -20,6 +20,12 @@ import static org.springframework.data.web.config.EnableSpringDataWebSupport.Pag
 public class DdadaApplication {
 
     public static void main(String[] args) {
+        System.out.println("=== ENV CHECK START ===");
+        System.out.println("DATASOURCE_URL: " + System.getenv("DATASOURCE_URL"));
+        System.out.println("DATASOURCE_USERNAME: " + System.getenv("DATASOURCE_USERNAME"));
+        System.out.println("DATASOURCE_PASSWORD: " + System.getenv("DATASOURCE_PASSWORD"));
+        System.out.println("=== ENV CHECK END ===");
+
         SpringApplication.run(DdadaApplication.class, args);
     }
 
