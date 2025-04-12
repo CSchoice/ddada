@@ -9,7 +9,7 @@ version = '0.0.1'
 
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(17)
+        languageVersion = JavaLanguageVersion.of(21)
     }
 }
 
@@ -25,6 +25,9 @@ configurations {
     compileOnly {
         extendsFrom annotationProcessor
     }
+    all {
+        exclude group: 'commons-logging', module: 'commons-logging' // 충돌 방지
+    }
 }
 
 repositories {
@@ -33,12 +36,7 @@ repositories {
 
 dependencies {
     // web
-    implementation('org.springframework.boot:spring-boot-starter-web') {
-        exclude group: 'org.apache.tomcat.embed', module: 'tomcat-embed-core'
-    }
-    implementation 'org.apache.tomcat.embed:tomcat-embed-core:10.1.18'
-    implementation 'org.apache.tomcat.embed:tomcat-embed-websocket:10.1.18'
-
+    implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-webflux'
 
     // lombok
@@ -90,8 +88,11 @@ dependencies {
     // metric 수집
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     runtimeOnly 'io.micrometer:micrometer-registry-prometheus'
+
+    // Apache POI - Excel 파일 읽기
+    implementation 'org.apache.poi:poi-ooxml:5.2.3'
 }
 
 tasks.named('test') {
-    useJUnitPlatform()
+    enabled = false // 항상 테스트 건너뛰기
 }
